@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotelCasaSol>
+    <metaInfo>
+        <title>Hotel Casa Sol</title>
+        <charset>UTF-8</charset>
+        <viewport>width=device-width, initial-scale=1.0</viewport>
+        <stylesheets>
+            <stylesheet href="styles.css"/>
+            <stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+            <stylesheet href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+                         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+                         crossorigin="anonymous"/>
+        </stylesheets>
+    </metaInfo>
+    <body>
+        <header>
+            <div class="header-container">
+                <h1>Bienvenidos</h1>
+                <nav>
+                    <menu>
+                        <item><link href="#inicio">Inicio</link></item>
+                        <item><link href="#servicios">Servicios</link></item>
+                        <item><link href="#habitaciones">Habitaciones</link></item>
+                        <item><link href="#contacto">Contacto</link></item>
+                    </menu>
+                </nav>
+                <section class="logo">
+                    <image src="imagenes/logo10.jpg" alt="Logo del Hotel Casa Sol"/>
+                </section>
+                <div class="user-actions">
+                    <button id="loginBtn">Iniciar Sesión</button>
+                    <button id="registerBtn">Registrarse</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="video-section">
+                <video autoplay="true" loop="true" muted="true">
+                    <source src="video.mp4" type="video/mp4"/>
+                </video>
+            </section>
+            <section id="inicio">
+                <h2>Inicio</h2>
+                <p>Descubre la mejor experiencia de hospedaje en el Hotel Casa Sol.</p>
+            </section>
+            <section id="servicios">
+                <h2>Servicios</h2>
+                <serviceList>
+                    <service>Wi-Fi gratuito</service>
+                    <service>Piscina</service>
+                    <service>Gimnasio</service>
+                    <service>Restaurante</service>
+                </serviceList>
+                <section class="servicio-imagenes">
+                    <image src="imagenes/wifi.jpg" alt="Wi-Fi gratuito"/>
+                    <image src="imagenes/pool.jpg" alt="Piscina"/>
+                    <image src="imagenes/gym.jpg" alt="Gimnasio"/>
+                    <image src="imagenes/Restaurant.jpg" alt="Restaurante"/>
+                </section>
+            </section>
+            <section id="habitaciones">
+                <h2>Habitaciones</h2>
+                <p>Ofrecemos una variedad de habitaciones cómodas y lujosas para satisfacer todas tus necesidades.</p>
+                <section class="habitacion-imagenes">
+                    <image src="imagenes/habitacion.jpg" alt="Habitación 1"/>
+                    <image src="imagenes/habitacion2.jpg" alt="Habitación 2"/>
+                    <image src="imagenes/habitacion3.jpg" alt="Habitación 3"/>
+                    <image src="imagenes/habitacion4.jpg" alt="Habitación 4"/>
+                </section>
+            </section>
+            <section id="contacto">
+                <h2>Ubicación</h2>
+                <p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105339.65413641404!2d-74.07095461418652!3d4.617955676121854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b3261684ce1%3A0x15c5d987a01f1a01!2sCasa%20Sol!5e0!3m2!1ses-419!2sco!4v1715897059902!5m2!1ses-419!2sco"
+                            width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"/>
+                </p>
+            </section>
+        </main>
+        <footer>
+            <div class="social-icons">
+                <link href="#"><icon class="fab fa-facebook-f"/></link>
+                <link href="#"><icon class="fab fa-twitter"/></link>
+                <link href="#"><icon class="fab fa-instagram"/></link>
+                <link href="#"><icon class="fab fa-linkedin-in"/></link>
+            </div>
+            <p>&copy; 2024 Hotel Casa Sol. Todos los derechos reservados.</p>
+        </footer>
+        <modal id="loginModal">
+            <modalContent>
+                <span class="close" id="closeLogin">&times;</span>
+                <h2>Iniciar Sesión</h2>
+                <form action="/login" method="post">
+                    <label for="login-username">Usuario:</label>
+                    <input type="text" id="login-username" name="username" required="true"/>
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required="true"/>
+                    <button type="submit">Iniciar Sesión</button>
+                    <button class="google-login" type="button">Iniciar Sesión con Gmail</button>
+                    <link href="#" class="forgot-password">¿Olvidaste tu contraseña?</link>
+                </form>
+            </modalContent>
+        </modal>
+        <modal id="registerModal">
+            <modalContent>
+                <span class="close" id="closeRegister">&times;</span>
+                <h2>Registrarse</h2>
+                <form action="/register" method="post">
+                    <label for="register-username">Usuario:</label>
+                    <input type="text" id="register-username" name="username" required="true"/>
+                    <label for="register-email">Correo Electrónico:</label>
+                    <input type="email" id="register-email" name="email" required="true"/>
+                    <label for="register-password">Contraseña:</label>
+                    <input type="password" id="register-password" name="password" required="true"/>
+                    <button type="submit">Registrarse</button>
+                    <button class="google-login" type="button">Registrarse con Gmail</button>
+                </form>
+            </modalContent>
+        </modal>
+    </body>
+</hotelCasaSol>
